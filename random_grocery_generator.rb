@@ -1,4 +1,5 @@
 require_relative 'grocer'
+require 'pry'
 
 def items
 	[
@@ -54,4 +55,6 @@ coupons.each do |coupon|
 	puts "Get #{coupon[:item].capitalize} for #{coupon[:cost]} when you by #{coupon[:num]}"
 end
 
+consolidate_cart(cart)
+  
 puts "Your total is #{checkout(cart: cart, coupons: coupons)}"
